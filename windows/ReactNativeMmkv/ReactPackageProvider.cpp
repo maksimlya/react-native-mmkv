@@ -4,7 +4,7 @@
 #include "ReactPackageProvider.g.cpp"
 #endif
 
-#include "ReactNativeMMKV.h"
+#include "MmkvModule.h"
 
 using namespace winrt::Microsoft::ReactNative;
 

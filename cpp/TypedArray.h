@@ -11,6 +11,7 @@
 #include <jsi/jsi.h>
 #include <utility>
 #include <vector>
+#include <stdexcept>
 
 namespace jsi = facebook::jsi;
 

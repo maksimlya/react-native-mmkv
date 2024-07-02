@@ -11,7 +11,7 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="ReactPackageProvider.h" />
-    <ClInclude Include="ReactNativeMMKV.h" />
+    <ClInclude Include="MmkvModule.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
