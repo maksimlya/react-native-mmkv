@@ -14,7 +14,7 @@
   <mp:PhoneIdentity PhoneProductId="f86ad582-6012-498c-86d4-ce843c8ebb22" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>react-native-mmkv-example</DisplayName>
+    <DisplayName>reactnativemmkvexample</DisplayName>
     <PublisherDisplayName>PC</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -31,12 +31,12 @@
     <Application
       Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="react-native-mmkv-example.App">
+      EntryPoint="reactnativemmkvexample.App">
       <uap:VisualElements
-        DisplayName="react-native-mmkv-example"
+        DisplayName="reactnativemmkvexample"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="react-native-mmkv-example"
+        Description="reactnativemmkvexample"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

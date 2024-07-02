@@ -9,7 +9,7 @@
 using namespace winrt;
 using namespace xaml;
 
-namespace winrt::react-native-mmkv-example::implementation
+namespace winrt::reactnativemmkvexample::implementation
 {
     MainPage::MainPage()
     {
