@@ -13,8 +13,8 @@ using namespace winrt::Microsoft::ReactNative;
 namespace winrt::ReactNativeMmkv
 {
 
-REACT_MODULE(MMKV, L"MMKV")
-struct MMKV
+REACT_MODULE(RNMMKV, L"MMKV")
+struct RNMMKV
 {
     // See https://microsoft.github.io/react-native-windows/docs/native-modules for details on writing native modules
 
@@ -27,6 +27,8 @@ struct MMKV
     REACT_SYNC_METHOD(install)
     bool install(std::string stringArgument) noexcept
     {
+       mmkv::MMBuffer buffer;
+       MMKV* instance;
        // TODO.....
        return true;
     }
