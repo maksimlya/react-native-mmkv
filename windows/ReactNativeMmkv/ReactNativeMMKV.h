@@ -6,6 +6,7 @@
 #include <JSI/JsiApiContext.h>
 #include <winrt/Microsoft.ReactNative.h>
 #include <TurboModuleProvider.h>
+#include <MMKV/MMKV.h>
 
 using namespace winrt::Microsoft::ReactNative;
 
