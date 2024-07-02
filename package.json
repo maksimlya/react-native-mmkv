@@ -40,7 +40,8 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && yarn pods",
-    "bootstrap": "git submodule update --init --recursive && yarn && cd example && yarn bootstrap"
+    "bootstrap": "git submodule update --init --recursive && yarn && cd example && yarn bootstrap",
+    "windows": "react-native run-windows"
   },
   "keywords": [
     "react-native",
@@ -78,9 +79,11 @@
     "react": "^18.2.0",
     "react-native": "^0.74.2",
     "react-native-builder-bob": "^0.20.4",
+    "react-native-windows": "0.74.10",
     "react-test-renderer": "^18.2.0",
     "release-it": "^15.10.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "metro-config": "^0.80.9"
   },
   "peerDependencies": {
     "react": "*",
