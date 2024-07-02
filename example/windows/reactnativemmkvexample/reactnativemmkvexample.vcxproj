@@ -158,6 +158,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\windows\ReactNativeMmkv\ReactNativeMmkv.vcxproj">
+      <Project>{2d2c6d25-3411-45b8-b205-bc47faca6e25}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ReactNativeWindowsTargets">

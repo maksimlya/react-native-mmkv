@@ -1,15 +1,19 @@
 ﻿#pragma once
 
 #include "JSValue.h"
+#include <jsi/jsi.h>
 #include "NativeModules.h"
+#include <JSI/JsiApiContext.h>
+#include <winrt/Microsoft.ReactNative.h>
+#include <TurboModuleProvider.h>
 
 using namespace winrt::Microsoft::ReactNative;
 
 namespace winrt::ReactNativeMmkv
 {
 
-REACT_MODULE(ReactNativeModule, L"ReactNativeMmkv")
-struct ReactNativeModule
+REACT_MODULE(MMKV, L"MMKV")
+struct MMKV
 {
     // See https://microsoft.github.io/react-native-windows/docs/native-modules for details on writing native modules
 
@@ -19,11 +23,11 @@ struct ReactNativeModule
         m_reactContext = reactContext;
     }
     
-    REACT_METHOD(sampleMethod)
-    void sampleMethod(std::string stringArgument, int numberArgument, std::function<void(std::string)> &&callback) noexcept
+    REACT_SYNC_METHOD(install)
+    bool install(std::string stringArgument) noexcept
     {
-        // TODO: Implement some actually useful functionality
-        callback("Received numberArgument: " + std::to_string(numberArgument) + " stringArgument: " + stringArgument);
+       // TODO.....
+       return true;
     }
 
     private:

@@ -9,7 +9,7 @@ namespace winrt::reactnativemmkvexample::implementation
 
 void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept
 {
-    AddAttributedModules(packageBuilder, true);
+    AddAttributedModules(packageBuilder, false);
 }
 
 } // namespace winrt::reactnativemmkvexample::implementation
