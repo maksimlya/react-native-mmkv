@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "JSValue.h"
 #include <jsi/jsi.h>
@@ -62,12 +62,21 @@ struct MMKVModule
 
         auto& runtime = *jsiRuntime;
 
-        winrt::hstring path =
-            winrt::Windows::Storage::ApplicationData::Current().LocalFolder().Path();
-        std::wstring localFolderPath = path.c_str();
+        winrt::Windows::Storage::StorageFolder localFolder =
+            winrt::Windows::Storage::ApplicationData::Current().LocalFolder();
+
+        // Check if the folder exists and create it if it doesn't.
+        winrt::Windows::Storage::StorageFolder mmkvFolder = nullptr;
+        try {
+          // Try to get the folder.
+          mmkvFolder = localFolder.GetFolderAsync(L"mmkv").get();
+        } catch (const winrt::hresult_error& ex) {
+          // If the folder doesn't exist, create it.
+            mmkvFolder = localFolder.CreateFolderAsync(L"mmkv").get();
+        }
 
         MMKVLogLevel logLevel = MMKVLogError; // TODO ?
-        MMKV::initializeMMKV(localFolderPath, logLevel);
+        MMKV::initializeMMKV(mmkvFolder.Path().c_str(), logLevel);
         
         // MMKV.createNewInstance()
         auto mmkvCreateNewInstance = jsi::Function::createFromHostFunction(
